@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Five9 Visual IVR Sample</title>
+
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+		<script src="IVRLaunch.js"></script>
+	</head>
+	<body>
+		<div class='container-fluid'>
+			<div class="row-fluid" >
+				<div class="col-lg-12">
+					<div class="pull-right">
+						<img src="Five9Logo.gif"></img>
+					</div>
+					<h1>Visual IVR Sample</h1>
+				</div>
+			</div>
+			<div class="row-fluid" >
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="row-fluid">
+								<div class="col-lg-12">
+									<p>The following form is for flexibility in testing the Visual IVR functionality.  In a production deployment you would typically hide the form fields, or hard-code the values in the Javascript (see the IVRLaunch object in the IVRLaunch.js file).</p>
+									<form role="form">
+										<div class="form-group">
+											  <label for="f9host">Host</label>
+											  <input type="text" id="f9host" class="form-control" value="api.five9.com">
+										</div>
+										<div class="form-group">
+											  <label for="f9version">Version</label>
+											  <input type="text" id="f9version" class="form-control" value="ivr">
+										</div>
+										<div class="form-group">
+											  <label for="f9domain">Domain</label>
+											  <input type="text" id="f9domain" class="form-control" >
+										</div>
+										<div class="form-group">
+											  <label for="f9campaign">Campaign</label>
+											  <input type="text" id="f9campaign" class="form-control" >
+										</div>
+										<div class="form-group">
+											  <label for="f9parameters">URL Parameters&nbsp;&nbsp;<small>ex. key1=value1&key2=value2 (Note: key names must match IVR script variable names)</small></label>
+											  <input type="text" id="f9parameters" class="form-control" >
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="row-fluid">
+								<div class="col-lg-12">
+									<!-- Add an id called checkVIVR -->
+									<a id="checkVIVR" class="btn btn-large btn-primary">
+										Launch Visual IVR Session
+									</a>
+								</div>
+							</div>
+							<br/><br/>
+							<div class="row-fluid">
+								<div class="col-lg-12">
+									<div id="checkVIVRError"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
